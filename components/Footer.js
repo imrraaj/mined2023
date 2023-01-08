@@ -11,16 +11,16 @@ export default function Footer() {
       <div>
         <ul className="secondary-navigation">
           <li>
-            <a href="#">About</a>
+            <a href="/">About</a>
           </li>
           <li>
-            <a href="#">Tracks</a>
+            <a href="/events">Events</a>
           </li>
           <li>
-            <a href="#">Sponsors</a>
+            <a href="/team">Team</a>
           </li>
           <li>
-            <a href="#">Team</a>
+            <a href="/contact">Contact</a>
           </li>
         </ul>
       </div>

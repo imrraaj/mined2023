@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 :root {
   --clr-soft-orange: hsl(35, 77%, 62%);
-  --clr-soft-red: hsl(5, 85%, 63%);
+  --clr-soft-blue: #4299e1;
 
   --clr-ofwhite: hsl(36, 100%, 99%);
   --clr-grayish-blue: hsl(233, 8%, 79%);
@@ -34,6 +34,26 @@ a {
 button,
 input {
   font-family: "Inter", sans-serif;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5rem;
+  padding: 1rem 0.5rem;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p,
+blockquote span {
+  font-weight: 600;
+  padding-left: 2rem;
 }
 
 .primary-nav {
@@ -70,8 +90,7 @@ input {
   transition: color 250ms;
 }
 .primary-navigation li a:hover {
-  color: var(--clr-soft-red);
-  text-decoration: 4px underline;
+  color: var(--clr-soft-blue);
 }
 
 @media (max-width: 840px) {
@@ -132,7 +151,7 @@ input {
   color: var(--clr-dark-grayish-blue);
 }
 .secondary-navigation li a:hover {
-  color: var(--clr-soft-red);
+  color: var(--clr-soft-blue);
 }
 
 .socials-list {
@@ -150,7 +169,7 @@ input {
   color: var(--clr-dark-grayish-blue);
 }
 .socials-list li a:hover {
-  color: var(--clr-soft-red);
+  color: var(--clr-soft-blue);
 }
 
 @media (max-width: 840px) {

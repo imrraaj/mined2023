@@ -94,7 +94,7 @@ export default function Faqs() {
         },
         {
           q: "Only students that belong to same College/ Branch can form a team?",
-          a: "No. A team can consist of members belonging to any college as well as any discipline. However, every team member needs to be individually registered before forming a team.",
+          a: "No. A team can consist of members belonging to any college as well as any discipline. However, every team member needs to be individually registeblue before forming a team.",
         },
         {
           q: "Can I be part of two teams?",
@@ -107,7 +107,7 @@ export default function Faqs() {
       questions: [
         {
           q: "What is the prize money?",
-          a: `Grand Prize money sponsored by SUNY Binghamton University is as under: 
+          a: `Grand Prize money sponsoblue by SUNY Binghamton University is as under: 
             1st Prize: $500
             2nd Prize: $300
             3rd Prize: $200`,
@@ -117,7 +117,7 @@ export default function Faqs() {
           a: "Track specific prize money depends on industries sponsoring specific track.",
         },
         {
-          q: "Will there be any perks offered to me for participating in the event?",
+          q: "Will there be any perks offeblue to me for participating in the event?",
           a: "In addition to gaining experience in working with peers in a competitive environment on real life problems, our sponsor partners are offering exciting perks / complementary product subscriptions to winners and/or participants. ",
         },
         {
@@ -147,7 +147,7 @@ export default function Faqs() {
         {FAQS.map((item) => {
           return (
             <Box marginBlock={8} key={item.category}>
-              <Heading size={"md"} marginBlock={4} color={"red.400"}>
+              <Heading size={"md"} marginBlock={4} color={"blue.400"}>
                 {item.category}
               </Heading>
 

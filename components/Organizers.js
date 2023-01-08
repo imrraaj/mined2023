@@ -3,7 +3,7 @@ import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 export default function Organizers() {
   return (
     <Box>
-      <Heading color={"red.400"} marginBlock={"8"}>
+      <Heading color={"blue.400"} marginBlock={"8"}>
         About Organizers
       </Heading>
       <Box>

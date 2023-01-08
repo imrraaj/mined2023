@@ -10,27 +10,27 @@ export default function Tracks() {
         templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(4, 1fr)" }}
         gap={4}
       >
-        <GridItem borderWidth={"2px"} borderColor={"red.400"}>
+        <GridItem borderWidth={"2px"} borderColor={"blue.400"}>
           <Text padding="16" textAlign={"center"}>
             To Be Annouced...
           </Text>
         </GridItem>
-        <GridItem borderWidth={"2px"} borderColor={"red.400"}>
+        <GridItem borderWidth={"2px"} borderColor={"blue.400"}>
           <Text padding="16" textAlign={"center"}>
             To Be Annouced...
           </Text>
         </GridItem>
-        <GridItem borderWidth={"2px"} borderColor={"red.400"}>
+        <GridItem borderWidth={"2px"} borderColor={"blue.400"}>
           <Text padding="16" textAlign={"center"}>
             To Be Annouced...
           </Text>
         </GridItem>
-        <GridItem borderWidth={"2px"} borderColor={"red.400"}>
+        <GridItem borderWidth={"2px"} borderColor={"blue.400"}>
           <Text padding="16" textAlign={"center"}>
             To Be Annouced...
           </Text>
         </GridItem>
-        <GridItem borderWidth={"2px"} borderColor={"red.400"}>
+        <GridItem borderWidth={"2px"} borderColor={"blue.400"}>
           <Text padding="16" textAlign={"center"}>
             To Be Annouced...
           </Text>
@@ -38,13 +38,13 @@ export default function Tracks() {
         <GridItem
           colSpan={{ md: 2 }}
           borderWidth={"2px"}
-          borderColor={"red.400"}
+          borderColor={"blue.400"}
         >
           <Text padding="16" textAlign={"center"}>
             To Be Annouced...
           </Text>
         </GridItem>
-        <GridItem borderWidth={"2px"} borderColor={"red.400"}>
+        <GridItem borderWidth={"2px"} borderColor={"blue.400"}>
           <Text padding="16" textAlign={"center"}>
             To Be Annouced...
           </Text>
