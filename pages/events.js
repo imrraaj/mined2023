@@ -15,6 +15,7 @@ import Tracks from "../components/Tracks";
 import About from "../components/About";
 import Prizes from "../components/Prizes";
 import Schedule from "../components/Schedule";
+import Partners from "../components/Partners";
 
 export default function Contact() {
   return (
@@ -33,6 +34,7 @@ export default function Contact() {
           <Tracks />
           <Schedule />
           <Sponsors />
+          <Partners />
         </Box>
         <Footer />
       </Container>

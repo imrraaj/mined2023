@@ -13,43 +13,46 @@ import {
 
 export default function Prizes() {
   return (
-    <Box>
-      <Heading textAlign={["center", "start"]}>Hackathon Prizes</Heading>
-      <Grid
-        h="auto"
-        templateRows={{ sm: "repeat(3, 1fr)", md: "repeat(1, 1fr)" }}
-        templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
-        gap={4}
-        marginBottom={8}
-      >
-        <GridItem order={[2, 1]}>
-          <PrizeCard
-            imgUrl={"/silver.svg"}
-            money={300}
-            text={"1st Runner-Up"}
-            mgtop={16}
-            order={2}
-          />
-        </GridItem>
-        <GridItem order={[1, 2]}>
-          <PrizeCard
-            imgUrl={"/gold.svg"}
-            money={500}
-            text={"Winner"}
-            order={1}
-          />
-        </GridItem>
-        <GridItem order={[3, 3]}>
-          <PrizeCard
-            imgUrl={"/bronze.svg"}
-            money={200}
-            text={"2nd Runner-Up"}
-            mgtop={20}
-            order={3}
-          />
-        </GridItem>
-      </Grid>
-    </Box>
+    <>
+      <Box>
+        <Heading textAlign={["center", "start"]}>Hackathon Prizes</Heading>
+        <Grid
+          h="auto"
+          templateRows={{ sm: "repeat(3, 1fr)", md: "repeat(1, 1fr)" }}
+          templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
+          gap={4}
+          marginBottom={8}
+        >
+          <GridItem order={[2, 1]}>
+            <PrizeCard
+              imgUrl={"/silver.svg"}
+              money={300}
+              text={"1st Runner-Up"}
+              mgtop={16}
+              order={2}
+            />
+          </GridItem>
+          <GridItem order={[1, 2]}>
+            <PrizeCard
+              imgUrl={"/gold.svg"}
+              money={500}
+              text={"Winner"}
+              order={1}
+            />
+          </GridItem>
+          <GridItem order={[3, 3]}>
+            <PrizeCard
+              imgUrl={"/bronze.svg"}
+              money={200}
+              text={"2nd Runner-Up"}
+              mgtop={20}
+              order={3}
+            />
+          </GridItem>
+        </Grid>
+      </Box>
+      <Binghamton />
+    </>
   );
 }
 
@@ -73,6 +76,68 @@ function PrizeCard({ imgUrl, money, text, mgtop }) {
       <Text fontSize={"2xl"} fontWeight={"black"}>
         {text}
       </Text>
+    </Box>
+  );
+}
+
+function Binghamton() {
+  return (
+    <Box marginBlock={16}>
+      <Heading textAlign={["center", "start"]}>
+        Prices Sponsored By Binghamton University
+      </Heading>
+      <Grid
+        templateRows={{ sm: "repeat(3, 1fr)", md: "repeat(1, 1fr)" }}
+        templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
+        gap={4}
+        marginBottom={8}
+      >
+        <GridItem order={[2, 1]}>
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            gap={4}
+            justifyContent={"center"}
+            alignItems={"center"}
+            boxShadow={"2xl"}
+            paddingBlock={8}
+            borderRadius={"lg"}
+          >
+            <Image src="/2nd.png" width={"32"} />
+            <Heading>2nd Place</Heading>
+          </Box>
+        </GridItem>
+        <GridItem order={[1, 2]}>
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            gap={4}
+            justifyContent={"center"}
+            alignItems={"center"}
+            boxShadow={"2xl"}
+            paddingBlock={8}
+            borderRadius={"lg"}
+          >
+            <Image src="/1st.png" width={"32"} />
+            <Heading>1st Place</Heading>
+          </Box>
+        </GridItem>
+        <GridItem order={[3, 3]}>
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            gap={4}
+            justifyContent={"center"}
+            alignItems={"center"}
+            boxShadow={"2xl"}
+            paddingBlock={8}
+            borderRadius={"lg"}
+          >
+            <Image src="/3rd.png" width={"32"} />
+            <Heading>3rd Place</Heading>
+          </Box>
+        </GridItem>
+      </Grid>
     </Box>
   );
 }

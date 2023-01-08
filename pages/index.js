@@ -27,8 +27,6 @@ export default function Home() {
         <Box marginBlock={16}>
           <Banner />
           <Organizers />
-          <Tracks />
-          <Sponsors />
           <Faqs />
           <Contact />
         </Box>
