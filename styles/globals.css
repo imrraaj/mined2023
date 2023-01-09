@@ -103,16 +103,16 @@ blockquote span {
     z-index: 9999;
     background-color: transparent;
     border: none;
-    background: url("../public/icon-menu.svg");
+    /* background: url("../public/icon-menu.svg"); */
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
-    width: 32px;
-    height: 31px;
+    /* width: 32px;
+    height: 31px; */
   }
-  .menu-icon[data-open="true"] {
+  /* .menu-icon[data-open="true"] {
     background: url("../public/icon-menu-close.svg");
-  }
+  } */
   .primary-navigation {
     position: fixed;
     inset: 0 0 0 100%;

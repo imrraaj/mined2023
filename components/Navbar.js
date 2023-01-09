@@ -1,9 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function Navbar() {
   const ulRef = useRef();
   const menuRef = useRef();
+  const [isOpened, setOpened] = useState(false);
   return (
     <nav className="primary-nav container">
       <div className="logo">
@@ -36,17 +38,37 @@ export default function Navbar() {
         className="menu-icon"
         id="menu"
         ref={menuRef}
+        data-open="false"
         onClick={() => {
           const value = ulRef.current.dataset.open;
           if (value == "true") {
             ulRef.current.dataset.open = "false";
             menuRef.current.dataset.open = "false";
+            setOpened(false);
           } else {
             ulRef.current.dataset.open = "true";
             menuRef.current.dataset.open = "true";
+            setOpened(true);
           }
         }}
-      ></button>
+      >
+        {!isOpened && (
+          <Image
+            src={"/icon-menu.svg"}
+            width={32}
+            height={31}
+            alt="Menu Icon for Opening the menu"
+          ></Image>
+        )}
+        {isOpened && (
+          <Image
+            src={"/icon-menu-close.svg"}
+            width={32}
+            height={31}
+            alt="Menu Icon for Closing the menu"
+          ></Image>
+        )}
+      </button>
     </nav>
   );
 }
