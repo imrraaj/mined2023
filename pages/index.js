@@ -28,7 +28,6 @@ export default function Home() {
           <Banner />
           <Organizers />
           <Faqs />
-          <Contact />
         </Box>
         <Footer />
       </Container>
