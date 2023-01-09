@@ -13,11 +13,11 @@ export default function TeamCard({ url, name, description, link }) {
   return (
     <Center py={6}>
       <Box
-        maxW={"320px"}
         boxShadow={"md"}
         rounded={"lg"}
         p={6}
         textAlign={"center"}
+        minW={"xs"}
       >
         <Avatar size={"2xl"} src={url} alt={name} mb={4} />
         <Heading fontSize={"2xl"} fontFamily={"body"}>
@@ -46,6 +46,9 @@ export default function TeamCard({ url, name, description, link }) {
             as={"a"}
             href={link}
             leftIcon={<FaLinkedinIn />}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
           >
             Connect
           </Button>

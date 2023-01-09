@@ -32,9 +32,18 @@ export default function Home() {
             textAlign={["center", "left"]}
             paddingBlock={4}
           >
-            Mentors
+            Advisors
           </Heading>
-          <TeamGrid />
+          <Advisor />
+          <Heading
+            size={"lg"}
+            color={"blue.400"}
+            textAlign={["center", "left"]}
+            paddingBlock={4}
+          >
+            Coordinators
+          </Heading>
+          <Coordinators />
           <Heading
             size={"lg"}
             color={"blue.400"}
@@ -43,7 +52,7 @@ export default function Home() {
           >
             Developers
           </Heading>
-          <DeveloperGrid />
+          <Developers />
         </Box>
         <Footer />
       </Container>
@@ -51,108 +60,127 @@ export default function Home() {
   );
 }
 
-function TeamGrid() {
+function Coordinators() {
+  const coordinators = [
+    {
+      name: "Dr Sapan H Mankad",
+      image: "/sapan_mankad.jpg",
+      linkedIn: "https://www.linkedin.com/in/sapan-mankad-4815601a/",
+    },
+    {
+      name: "Dr Vishal Parikh",
+      image: "/vishal_parikh.jpg",
+      linkedIn: "https://technology.nirmauni.ac.in/author/vishalparikh/",
+    },
+    {
+      name: "Dr Rupal Kapdi",
+      image: "/rupal_kapdi.jpeg",
+      linkedIn: "https://www.linkedin.com/in/dr-rupal-kapdi-474620256",
+    },
+  ];
   return (
     <Grid
       h="auto"
-      templateRows={{ sm: "repeat(8, 1fr)", md: "repeat(2, 1fr)" }}
-      templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(4, 1fr)" }}
+      templateRows={{ sm: "repeat(8, 1fr)", md: "repeat(1, 1fr)" }}
+      templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
       gap={4}
       marginBottom={8}
     >
-      <GridItem>
-        <TeamCard
-          url={"image url"}
-          name={"Raj Patel"}
-          description={"This is some kind of description"}
-          link={"link for linkedin"}
-        />
-      </GridItem>
-      <GridItem>
-        <TeamCard
-          url={"image url"}
-          name={"Raj Patel"}
-          description={"This is some kind of description"}
-          link={"link for linkedin"}
-        />
-      </GridItem>
-      <GridItem>
-        <TeamCard
-          url={"image url"}
-          name={"Raj Patel"}
-          description={"This is some kind of description"}
-          link={"link for linkedin"}
-        />
-      </GridItem>
-      <GridItem>
-        <TeamCard
-          url={"image url"}
-          name={"Raj Patel"}
-          description={"This is some kind of description"}
-          link={"link for linkedin"}
-        />
-      </GridItem>
-      <GridItem>
-        <TeamCard
-          url={"image url"}
-          name={"Raj Patel"}
-          description={"This is some kind of description"}
-          link={"link for linkedin"}
-        />
-      </GridItem>
+      {coordinators.map((ad) => (
+        <GridItem>
+          <TeamCard
+            url={ad.image}
+            name={ad.name}
+            description={""}
+            link={ad.linkedIn}
+          />
+        </GridItem>
+      ))}
+    </Grid>
+  );
+}
+function Advisor() {
+  const advisors = [
+    {
+      name: "Dr R N Patel",
+      designation: "Director",
+      image: "/dr_rn_patel.jpg",
+      linkedIn: "https://www.linkedin.com/in/rajesh-patel-b5144256/",
+    },
+    {
+      name: "Dr Madhuri Bhavsar",
+      image: "/dr_madhuri_bhavsar.jpg",
+      linkedIn: "https://www.linkedin.com/in/dr-madhuri-gujar-bhavsar-3bb61a6/",
+    },
+    {
+      name: "Dr Sangwon Yoon",
+      image: "/dr_yoon.jpg",
+      linkedIn: "https://www.linkedin.com/in/sang-won-yoon-bb886722/",
+    },
+  ];
+  return (
+    <Grid
+      h="auto"
+      templateRows={{ sm: "repeat(8, 1fr)", md: "repeat(1, 1fr)" }}
+      templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
+      gap={4}
+      marginBottom={8}
+    >
+      {advisors.map((ad) => (
+        <GridItem>
+          <TeamCard
+            url={ad.image}
+            name={ad.name}
+            description={ad.designation ?? "Advisor"}
+            link={ad.linkedIn}
+          />
+        </GridItem>
+      ))}
     </Grid>
   );
 }
 
-function DeveloperGrid() {
+function Developers() {
+  const developers = [
+    {
+      name: "Raj Patel",
+      image: "/raj_patel.jpg",
+      linkedIn: "https://www.linkedin.com/in/raj-k-patel21/",
+    },
+    {
+      name: "Vishal Chaudhary ",
+      image: "/vishal_chaudhary.jpeg",
+      linkedIn: "https://www.linkedin.com/in/vishal-chaudhary-95b2571a6",
+    },
+    {
+      name: "Kuldip Chaudhari",
+      image: "/kuldip_chaudhari.jpg",
+      linkedIn: "https://www.linkedin.com/in/kuldip-chaudhari-726b651a3",
+    },
+    {
+      name: "Dhairya",
+      image: "",
+      linkedIn: "",
+    },
+  ];
   return (
     <Grid
       h="auto"
-      templateRows={{ sm: "repeat(8, 1fr)", md: "repeat(2, 1fr)" }}
+      templateRows={{ sm: "repeat(8, 1fr)", md: "repeat(1, 1fr)" }}
       templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(4, 1fr)" }}
       gap={4}
       marginBottom={8}
     >
-      <GridItem>
-        <TeamCard
-          url={"image url"}
-          name={"Raj Patel"}
-          description={"This is some kind of description"}
-          link={"link for linkedin"}
-        />
-      </GridItem>
-      <GridItem>
-        <TeamCard
-          url={"image url"}
-          name={"Raj Patel"}
-          description={"This is some kind of description"}
-          link={"link for linkedin"}
-        />
-      </GridItem>
-      <GridItem>
-        <TeamCard
-          url={"image url"}
-          name={"Raj Patel"}
-          description={"This is some kind of description"}
-          link={"link for linkedin"}
-        />
-      </GridItem>
-      <GridItem>
-        <TeamCard
-          url={"image url"}
-          name={"Raj Patel"}
-          description={"This is some kind of description"}
-          link={"link for linkedin"}
-        />
-      </GridItem>
-      <GridItem>
-        <TeamCard
-          url={"image url"}
-          name={"Raj Patel"}
-          description={"This is some kind of description"}
-          link={"link for linkedin"}
-        />
-      </GridItem>
+      {developers.map((dev) => (
+        <GridItem>
+          <TeamCard
+            url={dev.image}
+            name={dev.name}
+            description={""}
+            link={dev.linkedIn}
+          />
+        </GridItem>
+      ))}
     </Grid>
   );
 }
