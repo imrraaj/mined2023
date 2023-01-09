@@ -24,18 +24,15 @@ export default function CallToActionWithVideo() {
         direction={{ base: "column", md: "row" }}
       >
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-          <Heading
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
-          >
+          <Heading lineHeight={1.1} fontWeight={600}>
             <Text
+              fontSize={"5xl"}
               as={"span"}
               position={"relative"}
               _after={{
                 content: "''",
                 width: "full",
-                height: "30%",
+                height: "20%",
                 position: "absolute",
                 bottom: 1,
                 left: 0,
@@ -46,8 +43,14 @@ export default function CallToActionWithVideo() {
               MINeD Hackathon 2023
             </Text>
             <br />
-            <Text as={"span"} color={"blue.400"}>
-              A Nice tagline
+            <Text
+              as={"span"}
+              color={"blue.400"}
+              fontSize={["lg", "xl"]}
+              lineHeight={"base"}
+            >
+              "Hackathons are where your crazy idea becomes reality"
+              <p>- Alex Kern</p>
             </Text>
           </Heading>
           <Text color={"gray.500"} fontSize={"xl"}>

@@ -1,53 +1,3 @@
-// import {
-//   Box,
-//   Button,
-//   Container,
-//   Flex,
-//   Heading,
-//   Input,
-//   Textarea,
-// } from "@chakra-ui/react";
-
-// export default function Contact() {
-//   return (
-//     <Box
-//       bgColor={"gray.50"}
-//       paddingInline={[4, 32]}
-//       paddingBlock={[8, 16]}
-//       borderRadius={5}
-//       marginInline={"auto"}
-//       marginBlock={16}
-//       id="contact"
-//     >
-//       <Heading marginInline={"auto"} marginBlock={4}>
-//         Contact Us
-//       </Heading>
-//       <Box gap={[16, 4]} display={{ md: "flex" }}>
-//         <Input
-//           variant="outline"
-//           placeholder="Your Name"
-//           marginBottom={[4, 0]}
-//         />
-//         <Input variant="outline" placeholder="Your Email" />
-//       </Box>
-//       <Box marginBlock={4}>
-//         <Input variant="outline" placeholder="Subject" />
-//       </Box>
-//       <Box marginBlock={4}>
-//         <Textarea placeholder="Enter Your Query" />
-//       </Box>
-//       <Button
-//         color={"white"}
-//         fontWeight={"bold"}
-//         bgColor={"blue.400"}
-//         _hover={{ bgColor: "blue.600" }}
-//       >
-//         Submit
-//       </Button>
-//     </Box>
-//   );
-// }
-
 import {
   Container,
   Flex,
@@ -76,8 +26,15 @@ import {
   MdOutlineEmail,
 } from "react-icons/md";
 import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
+import { useState } from "react";
 
 export default function contact() {
+  const [contactDetails, setContactDetails] = useState({
+    name: "",
+    mail: "",
+    desc: "",
+  });
+
   return (
     <Center>
       <Flex>
@@ -121,48 +78,77 @@ export default function contact() {
               <WrapItem>
                 <Box bg="white" borderRadius="lg">
                   <Box m={8} color="#0B0E3F">
-                    <VStack spacing={5}>
-                      <FormControl id="name">
-                        <FormLabel>Your Name</FormLabel>
-                        <InputGroup borderColor="#E0E1E7">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            children={<BsPerson color="gray.800" />}
+                    <form>
+                      <VStack spacing={5}>
+                        <FormControl isRequired id="name">
+                          <FormLabel>Your Name</FormLabel>
+                          <InputGroup borderColor="#E0E1E7">
+                            <InputLeftElement
+                              pointerEvents="none"
+                              children={<BsPerson color="gray.800" />}
+                            />
+                            <Input
+                              type="text"
+                              name="name"
+                              size="md"
+                              onChange={(e) => {
+                                setContactDetails({
+                                  ...contactDetails,
+                                  [e.target.name]: e.target.value,
+                                });
+                              }}
+                            />
+                          </InputGroup>
+                        </FormControl>
+
+                        <FormControl isRequired id="name">
+                          <FormLabel>Email</FormLabel>
+                          <InputGroup borderColor="#E0E1E7">
+                            <InputLeftElement
+                              pointerEvents="none"
+                              children={<BsPerson color="gray.800" />}
+                            />
+                            <Input
+                              type="email"
+                              name="mail"
+                              size="md"
+                              onChange={(e) => {
+                                setContactDetails({
+                                  ...contactDetails,
+                                  [e.target.name]: e.target.value,
+                                });
+                              }}
+                            />
+                          </InputGroup>
+                        </FormControl>
+
+                        <FormControl isRequired id="desc">
+                          <FormLabel>Message</FormLabel>
+                          <Textarea
+                            placeholder="message"
+                            name="desc"
+                            onChange={(e) => {
+                              setContactDetails({
+                                ...contactDetails,
+                                [e.target.name]: e.target.value,
+                              });
+                            }}
                           />
-                          <Input type="text" size="md" />
-                        </InputGroup>
-                      </FormControl>
-                      <FormControl id="name">
-                        <FormLabel>Mail</FormLabel>
-                        <InputGroup borderColor="#E0E1E7">
-                          <InputLeftElement
-                            pointerEvents="none"
-                            children={<MdOutlineEmail color="gray.800" />}
-                          />
-                          <Input type="text" size="md" />
-                        </InputGroup>
-                      </FormControl>
-                      <FormControl id="name">
-                        <FormLabel>Message</FormLabel>
-                        <Textarea
-                          borderColor="gray.300"
-                          _hover={{
-                            borderRadius: "gray.300",
-                          }}
-                          placeholder="message"
-                        />
-                      </FormControl>
-                      <FormControl id="name" float="right">
+                        </FormControl>
                         <Button
                           variant="solid"
                           bg="#0D74FF"
                           color="white"
                           _hover={{}}
+                          as={"a"}
+                          href={`mailto:sapanmankad@nirmauni.ac.in?subject=${encodeURI(
+                            contactDetails.name
+                          )}&body=${encodeURI(contactDetails.desc)}`}
                         >
                           Send Message
                         </Button>
-                      </FormControl>
-                    </VStack>
+                      </VStack>
+                    </form>
                   </Box>
                 </Box>
               </WrapItem>

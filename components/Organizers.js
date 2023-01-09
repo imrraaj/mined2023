@@ -11,8 +11,6 @@ export default function Organizers() {
           <Image
             src="/Nirma_logo.jpg"
             alt="Nirma University Logo"
-            width="64"
-            height="32"
             flex="1"
             marginInline={"auto"}
             order={[1, 1]}
@@ -48,8 +46,6 @@ export default function Organizers() {
         <Image
           src="/Binghamton_University_logo.png"
           alt="Binghamton University Logo"
-          width="64"
-          height="32"
           flex="1"
           order={[1, 2]}
           marginInline={"auto"}

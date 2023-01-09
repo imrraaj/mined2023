@@ -5,6 +5,7 @@ import {
   CardHeader,
   CheckboxIcon,
   Flex,
+  Heading,
   Tab,
   TabList,
   TabPanel,
@@ -17,6 +18,7 @@ import {
 export default function Schedule() {
   return (
     <Box>
+      <Heading marginBlock={8}>Tentative Schedule</Heading>
       <Tabs isFitted variant="enclosed">
         <TabList mb="1em">
           <Tab

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRef } from "react";
 
 export default function Navbar() {
@@ -6,7 +7,9 @@ export default function Navbar() {
   return (
     <nav className="primary-nav container">
       <div className="logo">
-        <img className="logo-image" src="/logo.png" alt="Menu" />
+        <Link href={"/"}>
+          <img className="logo-image" src="/logo.png" alt="Menu" />
+        </Link>
       </div>
 
       <ul
