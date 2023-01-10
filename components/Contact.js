@@ -54,19 +54,9 @@ export default function contact() {
                         size="md"
                         variant="ghost"
                         color="#DCE2FF"
-                        _hover={{}}
-                        leftIcon={<MdPhone color="#1970F1" size="20px" />}
-                      >
-                        Mobile No.
-                      </Button>
-                      <Button
-                        justifyContent={"start"}
-                        size="md"
-                        variant="ghost"
-                        color="#DCE2FF"
                         as={"a"}
                         href={"mailto:sapanmankad@nirmauni.ac.in"}
-                        _hover={{}}
+                        _hover={{ bgColor: "blue.900" }}
                         leftIcon={<MdEmail color="#1970F1" size="20px" />}
                       >
                         sapanmankad@nirmauni.ac.in

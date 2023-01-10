@@ -117,12 +117,17 @@ function Advisor() {
       image: "/dr_yoon.jpg",
       linkedIn: "https://www.linkedin.com/in/sang-won-yoon-bb886722/",
     },
+    {
+      name: "Priyank Thakkar",
+      image: "/priyank_thakkar.jpg",
+      linkedIn: "https://www.linkedin.com/in/priyank-thakkar-4701689b/",
+    },
   ];
   return (
     <Grid
       h="auto"
       templateRows={{ sm: "repeat(8, 1fr)", md: "repeat(1, 1fr)" }}
-      templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
+      templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(4, 1fr)" }}
       gap={4}
       marginBottom={8}
     >
@@ -159,8 +164,13 @@ function Developers() {
     },
     {
       name: "Dhairya",
-      image: "",
-      linkedIn: "",
+      image: "/dhairya_bakshi.jpg",
+      linkedIn: "https://www.linkedin.com/in/dhairya-baxi-38908a1b9",
+    },
+    {
+      name: "Jay Patel",
+      image: "/jay_patel.jpg",
+      linkedIn: "https://www.linkedin.com/in/jay-patel-4005a8227",
     },
   ];
   return (
