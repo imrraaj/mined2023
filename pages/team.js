@@ -118,7 +118,7 @@ function Advisor() {
       linkedIn: "https://www.linkedin.com/in/sang-won-yoon-bb886722/",
     },
     {
-      name: "Priyank Thakkar",
+      name: "Dr Priyank Thakkar",
       image: "/priyank_thakkar.jpg",
       linkedIn: "https://www.linkedin.com/in/priyank-thakkar-4701689b/",
     },

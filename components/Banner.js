@@ -53,13 +53,6 @@ export default function CallToActionWithVideo() {
               <p>- Alex Kern</p>
             </Text>
           </Heading>
-          <Text color={"gray.500"} fontSize={"xl"}>
-            A Chance to Win Prizes worth Rs 1,65,000+
-            <br />
-            <Text as={"span"} fontWeight={"bold"}>
-              March 3 - March 5, 2023
-            </Text>
-          </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={{ base: "column", sm: "row" }}
@@ -84,6 +77,9 @@ export default function CallToActionWithVideo() {
               fontWeight={"normal"}
               px={6}
               leftIcon={<FaDiscord h={4} w={4} color={"gray.300"} />}
+              as={"a"}
+              href="https://discord.gg/GSG2624M"
+              target={"_blank"}
             >
               Discord
             </Button>

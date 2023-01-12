@@ -27,7 +27,7 @@ export default function Footer() {
       <div>
         <ul className="socials-list">
           <li>
-            <a href="#">
+            <a href="https://discord.gg/GSG2624M">
               <FaDiscord />
             </a>
           </li>
@@ -42,7 +42,7 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href={"mailto:sapanmankad@nirmauni.ac.in"}>
               <MdEmail />
             </a>
           </li>

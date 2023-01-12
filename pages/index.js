@@ -9,6 +9,7 @@ import Tracks from "../components/Tracks";
 import Sponsors from "../components/Sponsors";
 import Faqs from "../components/Faqs";
 import Contact from "../components/Contact";
+import Testimonials from "../components/Testimonial";
 // import VideoCarousel from "../components/Videos";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -27,6 +28,7 @@ export default function Home() {
         <Box marginBlock={16}>
           <Banner />
           <Organizers />
+          <Testimonials />
           <Faqs />
         </Box>
         <Footer />
