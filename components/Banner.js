@@ -59,20 +59,7 @@ export default function CallToActionWithVideo() {
           >
             <Button
               rounded={"full"}
-              size={"lg"}
-              fontWeight={"normal"}
-              px={6}
               colorScheme={"blue"}
-              bg={"blue.400"}
-              _hover={{ bg: "blue.500" }}
-              as={"a"}
-              href="https://www.mined2022.tech/"
-              target={"_blank"}
-            >
-              Visit MINeD 2022
-            </Button>
-            <Button
-              rounded={"full"}
               size={"lg"}
               fontWeight={"normal"}
               px={6}
@@ -81,7 +68,7 @@ export default function CallToActionWithVideo() {
               href="https://discord.gg/GSG2624M"
               target={"_blank"}
             >
-              Discord
+              Join Discord
             </Button>
           </Stack>
         </Stack>
