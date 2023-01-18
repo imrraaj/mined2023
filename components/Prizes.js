@@ -15,7 +15,9 @@ export default function Prizes() {
   return (
     <>
       <Box>
-        <Heading textAlign={["center", "start"]}>Grand Prizes</Heading>
+        <Heading textAlign={["center", "start"]}>
+          Grand Prizes sponsored by SUNY Binghamton University
+        </Heading>
         <Grid
           h="auto"
           templateRows={{ sm: "repeat(3, 1fr)", md: "repeat(1, 1fr)" }}
