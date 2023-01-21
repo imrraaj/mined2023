@@ -70,6 +70,17 @@ export default function CallToActionWithVideo() {
             >
               Join Discord
             </Button>
+            <Button
+              rounded={"full"}
+              size={"lg"}
+              fontWeight={"normal"}
+              px={6}
+              as={"a"}
+              href="https://www.mined2022.tech/"
+              target={"_blank"}
+            >
+              Visit MINeD 2022
+            </Button>
           </Stack>
         </Stack>
         <Flex

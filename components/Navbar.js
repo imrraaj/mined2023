@@ -22,16 +22,16 @@ export default function Navbar() {
         ref={ulRef}
       >
         <li>
-          <a href="/">About</a>
+          <Link href="/">About</Link>
         </li>
         <li>
-          <a href="/events">Events</a>
+          <Link href="/events">Events</Link>
         </li>
         <li>
-          <a href="/team">Team</a>
+          <Link href="/team">Team</Link>
         </li>
         <li>
-          <a href="/contact">Contact</a>
+          <Link href="/contact">Contact</Link>
         </li>
       </ul>
       <button
