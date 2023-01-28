@@ -36,8 +36,8 @@ export default function Partners() {
           justifyContent={"center"}
           alignItems={"center"}
         >
-          <Link href={"https://givemycertificate.com/"} target="_blank">
-            <Image src="/echo3D_Logo.png" width={32} />
+          <Link href={"https://www.echo3d.com/"} target="_blank">
+            <Image src="/echo3D_Logo.png" width={48} />
           </Link>
         </GridItem>
         <GridItem cursor={"pointer"}>
