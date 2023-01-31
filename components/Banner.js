@@ -64,13 +64,11 @@ export default function CallToActionWithVideo() {
               fontWeight={"normal"}
               px={6}
               leftIcon={<FaDiscord h={4} w={4} color={"gray.300"} />}
-              as={"a"}
-              href="https://discord.gg/GSG2624M"
-              target={"_blank"}
+              disabled={true}
             >
               Join Discord
             </Button>
-            <Button
+            {/* <Button
               rounded={"full"}
               size={"lg"}
               fontWeight={"normal"}
@@ -80,7 +78,7 @@ export default function CallToActionWithVideo() {
               target={"_blank"}
             >
               Visit MINeD 2022
-            </Button>
+            </Button> */}
           </Stack>
         </Stack>
         <Flex
