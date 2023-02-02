@@ -1,30 +1,16 @@
 import {
-  Container,
-  Flex,
   Box,
   Heading,
-  Text,
-  IconButton,
   Button,
   VStack,
-  HStack,
-  Wrap,
-  WrapItem,
   FormControl,
   FormLabel,
   Input,
   InputGroup,
   InputLeftElement,
-  Textarea,
-  Center,
 } from "@chakra-ui/react";
-import {
-  MdPhone,
-  MdEmail,
-  MdLocationOn,
-  MdFacebook,
-  MdOutlineEmail,
-} from "react-icons/md";
+import { MdPhone, MdEmail } from "react-icons/md";
+import { BiBuildings } from "react-icons/bi";
 import { BsGithub, BsDiscord, BsPerson, BsLinkedin } from "react-icons/bs";
 import { useState } from "react";
 
@@ -41,6 +27,7 @@ export default function contact() {
       [e.target.name]: e.target.value,
     });
     console.log(contactDetails);
+    alert(contactDetails);
   };
 
   return (
@@ -93,7 +80,7 @@ export default function contact() {
               name="collageCity"
               type="text"
               isRequired={true}
-              Icon={MdPhone}
+              Icon={BiBuildings}
               onChange={onChange}
             />
             <CustomInput
@@ -101,7 +88,6 @@ export default function contact() {
               name="degree"
               type="text"
               isRequired={true}
-              Icon={MdPhone}
               onChange={onChange}
             />
             <CustomInput
@@ -109,7 +95,6 @@ export default function contact() {
               name="branch"
               type="text"
               isRequired={true}
-              Icon={MdPhone}
               onChange={onChange}
             />
             <CustomInput
@@ -117,7 +102,6 @@ export default function contact() {
               name="semester"
               type="text"
               isRequired={true}
-              Icon={MdPhone}
               onChange={onChange}
             />
             <CustomInput
@@ -125,7 +109,6 @@ export default function contact() {
               name="nameOnCertificate"
               type="text"
               isRequired={true}
-              Icon={MdPhone}
               onChange={onChange}
             />
             <CustomInput
@@ -164,10 +147,12 @@ function CustomInput({ label, Icon, type, name, onChange, isRequired }) {
     <FormControl isRequired={isRequired} id={name}>
       <FormLabel>{label}</FormLabel>
       <InputGroup borderColor="#E0E1E7">
-        <InputLeftElement
-          pointerEvents="none"
-          children={<Icon color="gray.800" />}
-        />
+        {Icon && (
+          <InputLeftElement
+            pointerEvents="none"
+            children={<Icon color="gray.800" />}
+          />
+        )}
         <Input type={type} name={name} size="md" onChange={onChange} />
       </InputGroup>
     </FormControl>

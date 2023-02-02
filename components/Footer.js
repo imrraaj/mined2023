@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaDiscord, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
@@ -30,24 +31,24 @@ export default function Footer() {
       <div>
         <ul className="socials-list">
           <li>
-            <a href="https://discord.gg/GSG2624M">
+            <Link href="https://discord.gg/GSG2624M">
               <FaDiscord />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link href="#">
               <FaYoutube />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link href="#">
               <FaLinkedinIn />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href={"mailto:sapanmankad@nirmauni.ac.in"}>
+            <Link href={"mailto:sapanmankad@nirmauni.ac.in"}>
               <MdEmail />
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

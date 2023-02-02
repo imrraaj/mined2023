@@ -1,18 +1,11 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
 import Organizers from "../components/Organizers";
 import { Box, Container } from "@chakra-ui/react";
-import Tracks from "../components/Tracks";
-import Sponsors from "../components/Sponsors";
 import Faqs from "../components/Faqs";
-import Contact from "../components/Contact";
 import Testimonials from "../components/Testimonial";
-// import VideoCarousel from "../components/Videos";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
