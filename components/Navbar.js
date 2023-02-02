@@ -33,6 +33,9 @@ export default function Navbar() {
         <li>
           <Link href="/contact">Contact</Link>
         </li>
+        <li>
+          <Link href="/register">Register</Link>
+        </li>
       </ul>
       <button
         className="menu-icon"
