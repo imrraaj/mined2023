@@ -15,33 +15,26 @@ import { BsGithub, BsDiscord, BsPerson, BsLinkedin } from "react-icons/bs";
 import { useState } from "react";
 
 export default function contact() {
-  const [contactDetails, setContactDetails] = useState({
-    name: "",
-    mail: "",
-    desc: "",
-  });
+  const [contactDetails, setContactDetails] = useState({});
 
   const onChange = (e) => {
     setContactDetails({
       ...contactDetails,
       [e.target.name]: e.target.value,
     });
-    console.log(contactDetails);
-    alert(contactDetails);
   };
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(contactDetails);
+    alert("sucess");
+  };
   return (
-    <Box
-      bg="#02054B"
-      color="white"
-      borderRadius="lg"
-      p={[0, 5, 16]}
-      maxW="4xl"
-      mx={"auto"}
-    >
-      <Heading>Registration Form</Heading>
-      <Box bg="white" color="#0B0E3F" borderRadius="lg" p={8} m={8}>
-        <form>
+    <Box bg="blue.700" borderRadius="lg" py="16" px="5" maxW="5xl" mx="auto">
+      <Heading textAlign="center" mb="8" color="white">
+        Registration Form
+      </Heading>
+      <Box bg="white" color="blue.700" borderRadius="lg" p={8} m={[0, 8]}>
+        <form onSubmit={handleSubmit}>
           <VStack spacing={5}>
             <CustomInput
               label="First Name"
@@ -70,7 +63,9 @@ export default function contact() {
             <CustomInput
               label="Mobile No"
               name="mobile"
-              type="text"
+              type="tel"
+              maxlength={10}
+              minlength={10}
               isRequired={true}
               Icon={MdPhone}
               onChange={onChange}
@@ -100,7 +95,11 @@ export default function contact() {
             <CustomInput
               label="Semester"
               name="semester"
-              type="text"
+              type="number"
+              maxlength={1}
+              minlength={1}
+              max={8}
+              min={1}
               isRequired={true}
               onChange={onChange}
             />
@@ -133,7 +132,15 @@ export default function contact() {
               onChange={onChange}
             />
           </VStack>
-          <Button my={8} variant="solid" bg="#02054B" color="white" _hover={{}}>
+          <Button
+            type="submit"
+            my={8}
+            variant="solid"
+            bg="blue.700"
+            color="white"
+            _focus={{}}
+            _hover={{}}
+          >
             Send Message
           </Button>
         </form>
@@ -142,7 +149,15 @@ export default function contact() {
   );
 }
 
-function CustomInput({ label, Icon, type, name, onChange, isRequired }) {
+function CustomInput({
+  label,
+  Icon,
+  type,
+  name,
+  onChange,
+  isRequired,
+  ...props
+}) {
   return (
     <FormControl isRequired={isRequired} id={name}>
       <FormLabel>{label}</FormLabel>
@@ -153,7 +168,13 @@ function CustomInput({ label, Icon, type, name, onChange, isRequired }) {
             children={<Icon color="gray.800" />}
           />
         )}
-        <Input type={type} name={name} size="md" onChange={onChange} />
+        <Input
+          type={type}
+          name={name}
+          size="md"
+          onChange={onChange}
+          {...props}
+        />
       </InputGroup>
     </FormControl>
   );
