@@ -61,6 +61,18 @@ export default function contact() {
                       >
                         sapanmankad@nirmauni.ac.in
                       </Button>
+                      <Button
+                        justifyContent={"start"}
+                        size="md"
+                        variant="ghost"
+                        color="#DCE2FF"
+                        as={"a"}
+                        href={"mailto:coe.ds@nirmauni.ac.in"}
+                        _hover={{ bgColor: "blue.900" }}
+                        leftIcon={<MdEmail color="#1970F1" size="20px" />}
+                      >
+                        coe.ds@nirmauni.ac.in
+                      </Button>
                     </VStack>
                   </Box>
                 </Box>
