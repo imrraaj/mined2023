@@ -8,11 +8,13 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
+  Text,
 } from "@chakra-ui/react";
 import { MdPhone, MdEmail } from "react-icons/md";
 import { BiBuildings } from "react-icons/bi";
 import { BsGithub, BsDiscord, BsPerson, BsLinkedin } from "react-icons/bs";
 import { useState } from "react";
+import axios from "axios";
 
 export default function contact() {
   const [contactDetails, setContactDetails] = useState({});
@@ -23,16 +25,37 @@ export default function contact() {
       [e.target.name]: e.target.value,
     });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(contactDetails);
     alert("sucess");
+    const response = await axios.post(
+      "http://apis.mined2023.tech:8000/api/registrations",
+      contactDetails
+    );
+    if (response.data) {
+      alert("Sucess");
+      console.log(response.data);
+    }
   };
   return (
     <Box bg="blue.700" borderRadius="lg" py="16" px="5" maxW="5xl" mx="auto">
       <Heading textAlign="center" mb="8" color="white">
         Registration Form
       </Heading>
+      <Text textAlign="center" color="white">
+        PLEASE NOTE: REGISTRATION FORM IS DIABLED AS OF NOW. PLEASE REFER
+        SOMETIME SOON!!
+      </Text>
+      {/* <Text
+        textAlign="center"
+        color="white"
+        as={"a"}
+        href="https://forms.gle/PXhe41oypw6bTxb46"
+        target="_blank"
+      >
+        Link For the registrations
+      </Text> */}
       <Box bg="white" color="blue.700" borderRadius="lg" p={8} m={[0, 8]}>
         <form onSubmit={handleSubmit}>
           <VStack spacing={5}>
@@ -64,8 +87,8 @@ export default function contact() {
               label="Mobile No"
               name="mobile"
               type="tel"
-              maxlength={10}
-              minlength={10}
+              maxLength={10}
+              minLength={10}
               isRequired={true}
               Icon={MdPhone}
               onChange={onChange}
@@ -96,8 +119,8 @@ export default function contact() {
               label="Semester"
               name="semester"
               type="number"
-              maxlength={1}
-              minlength={1}
+              maxLength={1}
+              minLength={1}
               max={8}
               min={1}
               isRequired={true}
@@ -140,6 +163,7 @@ export default function contact() {
             color="white"
             _focus={{}}
             _hover={{}}
+            disabled="true"
           >
             Send Message
           </Button>
