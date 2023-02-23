@@ -12,8 +12,10 @@ export default function Organizers() {
             src="/Nirma_logo.jpg"
             alt="Nirma University Logo"
             flex="1"
-            marginInline={"auto"}
+            marginInline="auto"
             order={[1, 1]}
+            display="block"
+            width={["7xl", 36]}
           ></Image>
           <Text
             flex="2"
@@ -49,6 +51,8 @@ export default function Organizers() {
           flex="1"
           order={[1, 2]}
           marginInline={"auto"}
+          display="block"
+          width={["7xl", 36]}
         ></Image>
         <Text
           flex="2"

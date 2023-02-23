@@ -8,10 +8,9 @@ import {
   Button,
   Image,
   Icon,
-  IconButton,
-  createIcon,
   useColorModeValue,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { FaDiscord } from "react-icons/fa";
 
 export default function CallToActionWithVideo() {
@@ -20,7 +19,7 @@ export default function CallToActionWithVideo() {
       <Stack
         align={"center"}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
+        py={8}
         direction={{ base: "column", md: "row" }}
       >
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
@@ -43,12 +42,10 @@ export default function CallToActionWithVideo() {
               MINeD Hackathon 2023
             </Text>
             <br />
-            <Text
-              as={"span"}
-              color={"blue.400"}
-              fontSize={["lg", "xl"]}
-              lineHeight={"base"}
-            >
+            <Text fontSize="2xl" marginTop="4" color={"blue.400"}>
+              From 3<sup>rd</sup> to 5<sup>th</sup> March 2023.
+            </Text>
+            <Text as={"span"} fontSize={["lg", "xl"]} lineHeight={"base"}>
               "Hackathons are where your crazy idea becomes reality"
               <p>- Alex Kern</p>
             </Text>
@@ -64,21 +61,11 @@ export default function CallToActionWithVideo() {
               fontWeight={"normal"}
               px={6}
               leftIcon={<FaDiscord h={4} w={4} color={"gray.300"} />}
-              disabled={true}
+              as={Link}
+              href="https://discord.gg/CT2YGpNhXr"
             >
               Join Discord
             </Button>
-            {/* <Button
-              rounded={"full"}
-              size={"lg"}
-              fontWeight={"normal"}
-              px={6}
-              as={"a"}
-              href="https://www.mined2022.tech/"
-              target={"_blank"}
-            >
-              Visit MINeD 2022
-            </Button> */}
           </Stack>
         </Stack>
         <Flex

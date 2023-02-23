@@ -1,3 +1,13 @@
+import NoSSR from "./NoSSR";
+
+function FaqsClientSideRendered() {
+  return (
+    <NoSSR>
+      <Faqs />
+    </NoSSR>
+  );
+}
+
 import {
   Accordion,
   AccordionButton,
@@ -5,16 +15,20 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
-  Button,
-  Flex,
-  Grid,
-  GridItem,
   Heading,
-  Image,
   Text,
 } from "@chakra-ui/react";
+import React from "react";
 
 export default function Faqs() {
+  const [hydrated, setHydrated] = React.useState(false);
+  React.useEffect(() => {
+    setHydrated(true);
+  }, []);
+  if (!hydrated) {
+    return null;
+  }
+
   const FAQS = [
     {
       category: "General",
@@ -25,14 +39,41 @@ export default function Faqs() {
         },
         {
           q: "Why should I participate in hackathon ?",
+          type: "HTML",
           a: `Hackathon has plenty of benefits: 
-          1. You will usually meet people with similar skills at hackathon. This will help improve your networking experience. 
-          2. Hackathon participation looks really impressive at your resume or CV. It signals to people that you have expertise in programming, experience performing in intense environments, and find a way to win.
-          3. Intense problem-solving environments such as hackathons promote the development of new ideas and concepts. You have to collaborate with individuals from diverse fields, with different interests and skills, all working together to solve the same problem. 
-          4. Opportunities to develop a career as many companies offer a job or internship to the best performers. 
-          5. Pair programming is awesome if you want to concentrate on getting as much done as possible in a limited time, and you'd love talking to your partner about problems. It's best to find someone with a similar level of ability, and take turns "driving" (typing) and advising. 
-          6. Increased visibility in this competitive environment 
-          7. Profile building`,
+          <ol style="margin-left:12px;">
+            <li>
+              You will usually meet people with similar skills at hackathon. This will help improve your networking experience. 
+            </li>
+            
+            <li>
+              Hackathon participation looks really impressive at your resume or CV. It signals to people that you have expertise in programming, experience performing in intense environments, and find a way to win.
+            </li>
+
+            <li>
+              Intense problem-solving environments such as hackathons promote the development of new ideas and concepts. You have to collaborate with individuals from diverse fields, with different interests and skills, all working together to solve the same problem. 
+            </li>
+
+
+            <li>
+              Opportunities to develop a career as many companies offer a job or internship to the best performers. 
+            </li>
+
+
+            <li>
+              Pair programming is awesome if you want to concentrate on getting as much done as possible in a limited time, and you'd love talking to your partner about problems. It's best to find someone with a similar level of ability, and take turns "driving" (typing) and advising. 
+            </li>
+
+
+            <li>
+              Increased visibility in this competitive environment 
+            </li>
+
+
+            <li>
+              Profile building
+            </li>
+          </ol>`,
         },
         {
           q: "Is this Hackathon online or offline?",
@@ -107,10 +148,12 @@ export default function Faqs() {
       questions: [
         {
           q: "What is the prize money?",
-          a: `Grand Prize money sponsoblue by SUNY Binghamton University is as under: 
-            1st Prize: $500
-            2nd Prize: $300
-            3rd Prize: $200`,
+          type: "HTML",
+          a: `
+            Grand Prize money sponsoblue by SUNY Binghamton University is as under: 
+            <li>1st Prize: $500</li>
+            <li>2nd Prize: $300</li>
+            <li>3rd Prize: $200</li>`,
         },
         {
           q: "Is there any track specific prize money?",
@@ -135,39 +178,50 @@ export default function Faqs() {
       questions: [
         {
           q: "My query is not listed in this FAQs section. What should I do?",
-          a: "Please write to us at sapanmankad@nirmauni.ac.in or join us on our social media platform.",
+          type: "HTML",
+          a: 'Please write to us at <a href="mailto:sapanmankad@nirmauni.ac.in" style="border-bottom:2px solid black;"> sapanmankad@nirmauni.ac.in </a> or join us on our social media platform.',
         },
       ],
     },
   ];
   return (
-    <Box marginBlock={16}>
-      <Heading marginBlock={"8"}>Have A Question?</Heading>
-      <Accordion allowMultiple>
-        {FAQS.map((item) => {
-          return (
-            <Box marginBlock={8} key={item.category}>
-              <Heading size={"md"} marginBlock={4} color={"blue.400"}>
-                {item.category}
-              </Heading>
+    <NoSSR>
+      <Box marginBlock={16}>
+        <Heading marginBlock={"8"}>Have A Question?</Heading>
+        <Accordion allowMultiple>
+          {FAQS.map((item) => {
+            return (
+              <Box marginBlock={8} key={item.category}>
+                <Heading size={"md"} marginBlock={4} color={"blue.400"}>
+                  {item.category}
+                </Heading>
 
-              {item.questions.map((questions) => {
-                return (
-                  <AccordionItem key={questions.q} paddingBlock={2}>
-                    <AccordionButton>
-                      <Box as="span" flex="1" textAlign="left">
-                        <Text fontWeight={"bold"}>{questions.q}</Text>
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                    <AccordionPanel pb={4}>{questions.a}</AccordionPanel>
-                  </AccordionItem>
-                );
-              })}
-            </Box>
-          );
-        })}
-      </Accordion>
-    </Box>
+                {item.questions.map((questions) => {
+                  return (
+                    <AccordionItem key={questions.q} paddingBlock={2}>
+                      <AccordionButton>
+                        <Box as="span" flex="1" textAlign="left">
+                          <Text fontWeight={"bold"}>{questions.q}</Text>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+
+                      {questions?.type == "HTML" ? (
+                        <AccordionPanel
+                          pb={4}
+                          dangerouslySetInnerHTML={{ __html: questions.a }}
+                        ></AccordionPanel>
+                      ) : (
+                        <AccordionPanel pb={4}>{questions.a}</AccordionPanel>
+                      )}
+                    </AccordionItem>
+                  );
+                })}
+              </Box>
+            );
+          })}
+        </Accordion>
+      </Box>
+    </NoSSR>
   );
 }

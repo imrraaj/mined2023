@@ -1,10 +1,11 @@
 import "../styles/globals.css";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Text } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 import Fonts from "../components/Fonts";
 import NextNProgress from "nextjs-progressbar";
 import { DefaultSeo } from "next-seo";
-
+import CountDownTimer from "../components/Timer";
+import NoSSR from "../components/NoSSR";
 const theme = extendTheme({
   fonts: {
     heading: `'Inter', sans-serif`,
@@ -13,6 +14,9 @@ const theme = extendTheme({
 });
 
 export default function App({ Component, pageProps }) {
+  const dateTimeForHackathon = new Date("03/03/2023 09:00:00").getTime();
+  // const dateTimeForHackathon = new Date("24 Feb 2023 00:12:00").getTime();
+
   return (
     <ChakraProvider theme={theme}>
       <DefaultSeo
@@ -27,7 +31,12 @@ export default function App({ Component, pageProps }) {
       />
       <NextNProgress />
       <Fonts />
+      <Text align="center" py="4" bgColor="blue.200">
+        Registration closes on <b>February 28, midnight.</b> Get yourself
+        registered as soon as possible.
+      </Text>
       <Component {...pageProps} />
+      <CountDownTimer targetDate={dateTimeForHackathon} />
     </ChakraProvider>
   );
 }

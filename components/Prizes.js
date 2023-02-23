@@ -23,7 +23,7 @@ export default function Prizes() {
           templateRows={{ sm: "repeat(3, 1fr)", md: "repeat(1, 1fr)" }}
           templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
           gap={4}
-          marginBottom={8}
+          marginBlock={8}
         >
           <GridItem order={[2, 1]}>
             <PrizeCard
