@@ -19,7 +19,6 @@ export default function Document() {
           content="MINeD 2023 Hackathon is organised by Nirma University"
         ></meta>
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="theme-color" content="#22c55e" />
         <meta name="twitter:title" content="MINeD 2023 Hackathon" />
         <meta
           name="twitter:description"
