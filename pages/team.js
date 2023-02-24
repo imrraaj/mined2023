@@ -23,7 +23,11 @@ export default function Home() {
       <Container maxW={"container.xl"} marginInline="auto">
         <Navbar />
         <Box marginBlock={16}>
-          <Heading paddingBlock={8} textAlign={["center", "left"]}>
+          <Heading
+            paddingBlock={8}
+            textAlign={["center", "left"]}
+            textDecoration="underline"
+          >
             Meet Our Team
           </Heading>
           <Heading
@@ -50,7 +54,7 @@ export default function Home() {
             textAlign={["center", "left"]}
             paddingBlock={4}
           >
-            Developers
+            Team Members
           </Heading>
           <Developers />
         </Box>
@@ -171,6 +175,16 @@ function Developers() {
       name: "Jay Patel",
       image: "/jay_patel.jpg",
       linkedIn: "https://www.linkedin.com/in/jay-patel-4005a8227",
+    },
+    {
+      name: "Kiran Kher",
+      image: "kiran_kher.jpg",
+      linkedIn: "https://www.linkedin.com/in/kiran-kher-a517b9225",
+    },
+    {
+      name: "Shubh Patel",
+      image: "shubh_patel.jpg",
+      linkedIn: "https://www.linkedin.com/in/shubh26/",
     },
   ];
   return (

@@ -45,6 +45,7 @@ export default function TeamCard({ url, name, description, link }) {
             }}
             as={"a"}
             href={link}
+            target="_blank"
             leftIcon={<FaLinkedinIn />}
             display={"flex"}
             justifyContent={"center"}
