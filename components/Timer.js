@@ -1,5 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
 import React from "react";
+import NoSSR from "./NoSSR";
 import { useCountdown } from "./Timerhook";
 
 const ExpiredNotice = () => {
@@ -52,25 +53,27 @@ const CountdownTimer = ({ targetDate }) => {
     );
   } else {
     return (
-      <Box
-        position={"fixed"}
-        bottom="0"
-        right="0"
-        bgColor="blue.200"
-        p="4"
-        width={"full"}
-        zIndex="1000"
-      >
-        <Text align="center" fontWeight="black">
-          Hackathon starts in
-        </Text>
-        <ShowCounter
-          days={days}
-          hours={hours}
-          minutes={minutes}
-          seconds={seconds}
-        />
-      </Box>
+      <NoSSR>
+        <Box
+          position={"fixed"}
+          bottom="0"
+          right="0"
+          bgColor="blue.200"
+          p="4"
+          width={"full"}
+          zIndex="1000"
+        >
+          <Text align="center" fontWeight="black">
+            Hackathon starts in
+          </Text>
+          <ShowCounter
+            days={days}
+            hours={hours}
+            minutes={minutes}
+            seconds={seconds}
+          />
+        </Box>
+      </NoSSR>
     );
   }
 };
