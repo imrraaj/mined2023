@@ -32,8 +32,20 @@ export default function Tracks() {
         </GridItem>
         <GridItem p="4">
           <TrackCard
+            imageUrl="https://lexica-serve-encoded-images2.sharif.workers.dev/full_jpg/d8d45c0e-226c-4d44-a91a-614e92b88240"
+            trackName="Stock Market Analysis"
+          />
+        </GridItem>
+        <GridItem p="4">
+          <TrackCard
+            imageUrl="https://lexica-serve-encoded-images2.sharif.workers.dev/full_jpg/4bf57a24-6927-44c6-a63c-b01e524a055e"
+            trackName="Natural Language processing"
+          />
+        </GridItem>
+        <GridItem p="4">
+          <TrackCard
             imageUrl="https://images.unsplash.com/photo-1676676701269-65de47175adf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
-            trackName="To Be annouced..."
+            trackName="Open Innovations"
           />
         </GridItem>
       </Grid>

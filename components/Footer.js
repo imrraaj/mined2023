@@ -24,7 +24,9 @@ export default function Footer() {
             <Link href="/contact">Contact</Link>
           </li>
           <li>
-            <Link href="/register">Register</Link>
+            <Link href="https://forms.gle/PXhe41oypw6bTxb46" target="_blank">
+              Register
+            </Link>
           </li>
         </ul>
       </div>
