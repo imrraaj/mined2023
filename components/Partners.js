@@ -26,6 +26,16 @@ export default function Partners() {
           justifyContent={"center"}
           alignItems={"center"}
         >
+          <Link href={"https://www.cognizant.com/us/en"} target="_blank">
+            <Image src="/cog.svg" width={56} />
+          </Link>
+        </GridItem>
+        <GridItem
+          cursor={"pointer"}
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
           <Link href={"https://givemycertificate.com/"} target="_blank">
             <Image src="/GMC_Logo.png" width={32} />
           </Link>
