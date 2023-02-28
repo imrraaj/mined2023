@@ -20,8 +20,11 @@ export default function App({ Component, pageProps }) {
       <NextNProgress />
       <Fonts />
       <Text align="center" py="4" bgColor="blue.200">
-        Registration closes on <b>February 28, midnight.</b> Get yourself
-        registered as soon as possible.
+        Registration closes on{" "}
+        <b>
+          March 1<sup>st</sup>, midnight.
+        </b>{" "}
+        Get yourself registered as soon as possible.
       </Text>
       <Component {...pageProps} />
       <CountDownTimer targetDate={dateTimeForHackathon} />

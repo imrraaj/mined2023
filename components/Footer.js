@@ -33,22 +33,12 @@ export default function Footer() {
       <div>
         <ul className="socials-list">
           <li>
-            <Link href="https://discord.gg/GSG2624M">
+            <Link href="https://discord.gg/CT2YGpNhXr" target="_blank">
               <FaDiscord />
             </Link>
           </li>
           <li>
-            <Link href="#">
-              <FaYoutube />
-            </Link>
-          </li>
-          <li>
-            <Link href="#">
-              <FaLinkedinIn />
-            </Link>
-          </li>
-          <li>
-            <Link href={"mailto:sapanmankad@nirmauni.ac.in"}>
+            <Link href={"mailto:sapanmankad@nirmauni.ac.in"} target="_blank">
               <MdEmail />
             </Link>
           </li>

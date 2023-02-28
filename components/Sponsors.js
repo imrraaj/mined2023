@@ -19,6 +19,8 @@ export default function Sponsors() {
         templateRows={{ sm: "repeat(8, 1fr)", md: "repeat(1, 1fr)" }}
         templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(4, 1fr)" }}
         gap={4}
+        justifyContent="center"
+        alignItems="center"
       >
         <GridItem
           cursor={"pointer"}
@@ -55,6 +57,17 @@ export default function Sponsors() {
             <Image src="/jk.png" />
           </Link>
         </GridItem>
+        <GridItem
+          cursor={"pointer"}
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          height="48"
+        >
+          <Link href={"#"} target="_blank">
+            <Image src="/ucwl.jpg" />
+          </Link>
+        </GridItem>
 
         <GridItem
           cursor={"pointer"}
@@ -76,6 +89,16 @@ export default function Sponsors() {
         >
           <Link href={"https://theintechgroup.com/"} target="_blank">
             <Image src="/intech.png" />
+          </Link>
+        </GridItem>
+        <GridItem
+          cursor={"pointer"}
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          <Link href={"#"} target="">
+            <Image src="/ai_city.png" height="56" />
           </Link>
         </GridItem>
       </Grid>
