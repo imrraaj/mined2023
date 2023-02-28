@@ -26,6 +26,28 @@ export default function Mentors() {
       designation: "Senior Product Engineer (AI/ML)",
       company: "Myelin Foundry",
     },
+    {
+      name: "Amrish Patel",
+      image: "/amrish_patel.jpg",
+      linkedIn: "https://www.linkedin.com/in/amrish-patel-1139b84/",
+      designation: "Founder",
+      company: "MLveda",
+    },
+    {
+      name: "Deepak Sharma",
+      image: "/deepak_sharma.jpg",
+      linkedIn: "https://www.linkedin.com/in/deepak-sharma-a528b015/",
+      designation: "Sr. Manager (IT)",
+      company: "J K Organisation(Udaipur Cement Works Ltd.)",
+    },
+    {
+      name: "Param Shah",
+      image: "/param_shah.jpg",
+      linkedIn: "https://www.linkedin.com/in/param-shah-ba281b190/",
+      designation:
+        "Student of CSE at Institute of Technology, Nirma University",
+      company: "",
+    },
   ];
   return (
     <Box marginBlock={16} id="mentors">
