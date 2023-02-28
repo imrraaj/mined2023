@@ -67,6 +67,17 @@ export default function Sponsors() {
             <Image src="/infocusp.png" />
           </Link>
         </GridItem>
+        <GridItem
+          cursor={"pointer"}
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          height="48"
+        >
+          <Link href={"https://theintechgroup.com/"} target="_blank">
+            <Image src="/intech.png" />
+          </Link>
+        </GridItem>
       </Grid>
     </Box>
   );

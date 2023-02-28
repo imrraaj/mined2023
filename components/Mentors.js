@@ -37,7 +37,7 @@ export default function Mentors() {
         marginBottom={8}
       >
         {mentors.map((dev) => (
-          <GridItem>
+          <GridItem key={dev.name}>
             <MentorCard
               url={dev.image}
               name={dev.name}
