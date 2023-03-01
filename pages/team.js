@@ -126,6 +126,11 @@ function Advisor() {
       image: "/priyank_thakkar.jpg",
       linkedIn: "https://www.linkedin.com/in/priyank-thakkar-4701689b/",
     },
+    {
+      name: "Dr Swati Jain",
+      image: "/swati_jain.jpg",
+      linkedIn: "https://www.linkedin.com/in/swati-jain-54845311/",
+    },
   ];
   return (
     <Grid

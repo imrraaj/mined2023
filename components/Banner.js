@@ -45,9 +45,8 @@ export default function CallToActionWithVideo() {
             <Text fontSize="2xl" marginTop="4" color={"blue.400"}>
               From 3<sup>rd</sup> to 5<sup>th</sup> March 2023.
             </Text>
-            <Text as={"span"} fontSize={["lg", "xl"]} lineHeight={"base"}>
-              "Hackathons are where your crazy idea becomes reality"
-              <p>- Alex Kern</p>
+            <Text as={"span"} fontSize={["lg", "xl"]} fontWeight="black">
+              Participate and win exciting prizes up to &#8377;2,30,000+
             </Text>
           </Heading>
           <Stack
