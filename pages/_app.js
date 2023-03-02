@@ -3,7 +3,6 @@ import { ChakraProvider, Text } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 import Fonts from "../components/Fonts";
 import NextNProgress from "nextjs-progressbar";
-import { DefaultSeo } from "next-seo";
 import CountDownTimer from "../components/Timer";
 const theme = extendTheme({
   fonts: {
@@ -20,11 +19,10 @@ export default function App({ Component, pageProps }) {
       <NextNProgress />
       <Fonts />
       <Text align="center" py="4" bgColor="blue.200">
-        Registration closes on{" "}
         <b>
-          March 1<sup>st</sup>, midnight.
-        </b>{" "}
-        Get yourself registered as soon as possible.
+          Registration are closed. Please head over to Discord for more
+          information.
+        </b>
       </Text>
       <Component {...pageProps} />
       <CountDownTimer targetDate={dateTimeForHackathon} />

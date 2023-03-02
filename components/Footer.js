@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaDiscord, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
@@ -22,11 +22,6 @@ export default function Footer() {
           </li>
           <li>
             <Link href="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link href="https://forms.gle/PXhe41oypw6bTxb46" target="_blank">
-              Register
-            </Link>
           </li>
         </ul>
       </div>

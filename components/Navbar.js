@@ -33,11 +33,6 @@ export default function Navbar() {
         <li>
           <Link href="/contact">Contact</Link>
         </li>
-        <li>
-          <Link href="https://forms.gle/PXhe41oypw6bTxb46" target={"_blank"}>
-            Register
-          </Link>
-        </li>
       </ul>
       <button
         className="menu-icon"
