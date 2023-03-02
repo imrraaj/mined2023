@@ -62,9 +62,39 @@ export default function Mentors() {
       company: "Cognizant",
     },
     {
+      name: "Hardik Prajapati",
+      image: "/hk.jpg",
+      linkedIn: "https://www.linkedin.com/in/prajapati-hardik/",
+      designation: "R & D Engineer",
+      company: "InFoCusp",
+    },
+    {
       name: "Param Shah",
       image: "/param_shah.jpg",
       linkedIn: "https://www.linkedin.com/in/param-shah-ba281b190/",
+      designation: "Intern at D360 Technologies",
+      company: "",
+    },
+    {
+      name: "Manil Shah",
+      image: "/manil.jpeg",
+      linkedIn: "https://www.linkedin.com/in/manilshah913/",
+      designation:
+        "Student of CSE at Institute of Technology, Nirma University",
+      company: "",
+    },
+    {
+      name: "Hardik Maisuria",
+      image: "/hardik.jpeg",
+      linkedIn: "https://www.linkedin.com/in/hardik-maisuria-675370208/",
+      designation:
+        "Student of CSE at Institute of Technology, Nirma University",
+      company: "",
+    },
+    {
+      name: "Kalp Mepani",
+      image: "/kalp.jpeg",
+      linkedIn: "https://www.linkedin.com/in/kalp-mepani-5350671a2/",
       designation:
         "Student of CSE at Institute of Technology, Nirma University",
       company: "",

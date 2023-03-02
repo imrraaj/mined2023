@@ -40,10 +40,14 @@ export default function Schedule() {
         </TabList>
         <TabPanels>
           <TabPanel>
-            <Text fontWeight={"semibold"}>To be annouced!!</Text>
+            <Text fontWeight={"black"} fontSize="xl">
+              Declared on Discord
+            </Text>
           </TabPanel>
           <TabPanel>
-            <Text fontWeight={"semibold"}>To be annouced!!</Text>
+            <Text fontWeight={"black"} fontSize="xl">
+              Declared on Discord
+            </Text>
           </TabPanel>
         </TabPanels>
       </Tabs>
