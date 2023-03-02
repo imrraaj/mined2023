@@ -41,6 +41,27 @@ export default function Mentors() {
       company: "J K Organisation(Udaipur Cement Works Ltd.)",
     },
     {
+      name: "Shrikant Kulkarni",
+      image: "/Shrikant_Kulkarni.jpg",
+      linkedIn: "https://www.linkedin.com/in/shrikantkulkarni/",
+      designation: "",
+      company: "Cognizant",
+    },
+    {
+      name: "Sujit Patange",
+      image: "/Sujit_Patange.jpg",
+      linkedIn: "https://www.linkedin.com/in/sujitpatange/",
+      designation: "",
+      company: "Cognizant",
+    },
+    {
+      name: "Saktipada Maity",
+      image: "/Saktipada_Maity.jpg",
+      linkedIn: "https://www.linkedin.com/in/saktipada-maity-10b08330/",
+      designation: "",
+      company: "Cognizant",
+    },
+    {
       name: "Param Shah",
       image: "/param_shah.jpg",
       linkedIn: "https://www.linkedin.com/in/param-shah-ba281b190/",

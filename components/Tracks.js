@@ -62,6 +62,12 @@ export default function Tracks() {
         </GridItem>
         <GridItem p="4">
           <TrackCard
+            imageUrl="https://image.lexica.art/full_jpg/6bf112cf-e487-46b5-aba9-b3f2249e1be9"
+            trackName="Environmental, Social, and Governance"
+          />
+        </GridItem>
+        <GridItem p="4">
+          <TrackCard
             imageUrl="https://images.unsplash.com/photo-1676676701269-65de47175adf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
             trackName="Open Innovations"
           />
