@@ -1,14 +1,7 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import {
-  Box,
-  Container,
-  Grid,
-  GridItem,
-  Heading,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Container, Grid, GridItem, Heading } from "@chakra-ui/react";
 import TeamCard from "../components/TeamCard";
 
 export default function Home() {
@@ -190,6 +183,11 @@ function Developers() {
       name: "Shubh Patel",
       image: "shubh_patel.jpg",
       linkedIn: "https://www.linkedin.com/in/shubh26/",
+    },
+    {
+      name: "Kajal Lochab",
+      image: "/Kajal_Lochab.jpg",
+      linkedIn: "https://www.linkedin.com/in/kajal-lochab",
     },
   ];
   return (
